@@ -772,7 +772,7 @@ class Generator(BaseGenerator):
                     file = file.path
                 else:
                     file = os.path.join(self.cm.buildPath, file.path)
-            file = os.path.normpath(file)
+            file = os.path.normpath(str(file))
             self.compdb.append({
                 "directory": directory,
                 "arguments": obj.argv,
